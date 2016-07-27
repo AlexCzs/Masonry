@@ -23,6 +23,7 @@
 #import "MASExampleAspectFitView.h"
 #import "MASExampleMarginView.h"
 #import "MASExampleDistributeView.h"
+#import "MASAlexView.h"
 
 static NSString * const kMASCellReuseIdentifier = @"kMASCellReuseIdentifier";
 
@@ -41,6 +42,8 @@ static NSString * const kMASCellReuseIdentifier = @"kMASCellReuseIdentifier";
     self.title = @"Examples";
     
     self.exampleControllers = @[
+        [[MASExampleViewController alloc] initWithTitle:@"myMasonryView"
+                                              viewClass:MASAlexView.class],
         [[MASExampleViewController alloc] initWithTitle:@"Basic"
                                               viewClass:MASExampleBasicView.class],
         [[MASExampleViewController alloc] initWithTitle:@"Update Constraints"
@@ -69,6 +72,7 @@ static NSString * const kMASCellReuseIdentifier = @"kMASCellReuseIdentifier";
                                               viewClass:MASExampleMarginView.class],
         [[MASExampleViewController alloc] initWithTitle:@"Views Distribute"
                                               viewClass:MASExampleDistributeView.class],
+        
 
     ];
     
