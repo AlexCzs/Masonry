@@ -12,6 +12,7 @@
 {
     UIView *_greenView;
     UIView *_redView;
+    UIView *_yellowView;
     BOOL isClick;
     NSMutableArray *_animatableConstraints;
 }
@@ -23,7 +24,7 @@
     UIView *greenView = UIView.new;
     _greenView = greenView;
     greenView.backgroundColor = UIColor.greenColor;
-    greenView.layer.borderColor = UIColor.redColor.CGColor;
+    greenView.layer.borderColor = UIColor.blackColor.CGColor;
     greenView.layer.borderWidth = 2;
     [MasonryTools makePostionView:greenView atTopAndLeftView:self viewSize:CGSizeMake(200, 200) offet:CGPointMake(100, 50)];
 
@@ -31,13 +32,14 @@
     UIView *redView = UIView.new;
     _redView = redView;
     redView.backgroundColor = UIColor.redColor;
-    redView.layer.borderColor = UIColor.greenColor.CGColor;
+    redView.layer.borderColor = UIColor.blackColor.CGColor;
     redView.layer.borderWidth = 2;
     [MasonryTools makePostionView:redView onBottomAndLeftView:greenView viewSize:CGSizeMake(200, 200) offet:CGPointMake(0, 50)];
     
     UIView *yellowView = UIView.new;
+    _yellowView = yellowView;
     yellowView.backgroundColor = UIColor.yellowColor;
-    yellowView.layer.borderColor = UIColor.blueColor.CGColor;
+    yellowView.layer.borderColor = UIColor.blackColor.CGColor;
     yellowView.layer.borderWidth = 3;
     [MasonryTools makePostionView:yellowView onTheRightAndCenterView:greenView viewSize:CGSizeMake(400, 200) offet:100];
     
@@ -59,14 +61,22 @@
         make.left.equalTo(_greenView);
         make.width.height.equalTo(_greenView);
     }];
+    
     if (!isClick) {
         [_greenView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.width.height.equalTo(100);
         }];
-        
+        [_yellowView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(200);
+            make.height.equalTo(100);
+        }];
     }else{
         [_greenView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.width.height.equalTo(250);
+        }];
+        [_yellowView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(400);
+            make.height.equalTo(200);
         }];
         
     }
@@ -75,6 +85,9 @@
     isClick = !isClick;
     [UIView animateWithDuration:1.0 animations:^{
         [self layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        // repeat
+        [self clickeMe];
     }];
 }
 
