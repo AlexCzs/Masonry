@@ -57,6 +57,8 @@
 		4473548E1B39F772004DACCB /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4473548C1B39F772004DACCB /* ViewController+MASAdditions.m */; };
 		447354921B3A18B3004DACCB /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4473548C1B39F772004DACCB /* ViewController+MASAdditions.m */; };
 		447354931B3A18B9004DACCB /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4473548B1B39F772004DACCB /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFB8DFFE1D49F7380012390F /* MasonryTools.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB8DFFC1D49F7380012390F /* MasonryTools.h */; };
+		FFB8DFFF1D49F7380012390F /* MasonryTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB8DFFD1D49F7380012390F /* MasonryTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		3AED06271AD5A1400053CC65 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4473548B1B39F772004DACCB /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		4473548C1B39F772004DACCB /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		FFB8DFFC1D49F7380012390F /* MasonryTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryTools.h; sourceTree = "<group>"; };
+		FFB8DFFD1D49F7380012390F /* MasonryTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 		3AED05B91AD59FD40053CC65 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
+				FFB8DFFC1D49F7380012390F /* MasonryTools.h */,
+				FFB8DFFD1D49F7380012390F /* MasonryTools.m */,
 				3AED05BC1AD59FD40053CC65 /* Masonry.h */,
 				3AED05E51AD5A0470053CC65 /* MASUtilities.h */,
 				3AED05EF1AD5A0470053CC65 /* View+MASAdditions.h */,
@@ -187,6 +193,7 @@
 				3AED05F21AD5A0470053CC65 /* MASCompositeConstraint.h in Headers */,
 				3AED05F61AD5A0470053CC65 /* MASConstraint+Private.h in Headers */,
 				3AED05F41AD5A0470053CC65 /* MASConstraint.h in Headers */,
+				FFB8DFFE1D49F7380012390F /* MasonryTools.h in Headers */,
 				3AED06031AD5A0470053CC65 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +322,7 @@
 				3AED05F31AD5A0470053CC65 /* MASCompositeConstraint.m in Sources */,
 				3AED05F81AD5A0470053CC65 /* MASConstraintMaker.m in Sources */,
 				3AED06041AD5A0470053CC65 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				FFB8DFFF1D49F7380012390F /* MasonryTools.m in Sources */,
 				3AED06061AD5A0470053CC65 /* View+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
